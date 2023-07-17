@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>KALKULATOR BMI</title>
+</head>
+
+<body>
+    <div class="tool-container">
+        <h1>KALKULATOR BMI</h1>
+        <div class="tool-container-feild-group">
+            <div id="bmiInput" class="tool-container-feild">
+
+                <div class="tool-input-group">
+                    <div class="tool-input-label">
+                        <label for="heightUnit">Jenis Kelamin</label>
+                        <p><input type='radio' name='pria' value='pria' />Pria</p>
+                        <p><input type='radio' name='perempuan' value='perempuan' />Perempuan</p>
+                    </div>
+
+
+                </div>
+
+                <div class="tool-input-group">
+                    <div class="tool-input-label">
+                        <label for="heightUnit">Tinggi Badan (cm):</label>
+                    </div>
+                    <select name="height" class="tool-select-group" id="heightUnit">
+                        <option value="Centimeter">CM</option>
+                    </select>
+                    <input type="number" id="bmiHeight" placeholder="Tinggi Badan" name="from-temperature" min="0" class="tool-input-feild">
+                </div>
+
+                <div class="tool-input-group">
+                    <div class="tool-input-label">
+                        <label for="weightUnit">Usia (Tahun)</label>
+                    </div>
+                    <select name="height" class="tool-select-group" id="heightUnit">
+                        <option value="Tahun">Tahun</option>
+                    </select>
+                    <input placeholder="27" type="number" class="tool-input-feild">
+                </div>
+
+                <div class="tool-input-group">
+                    <div class="tool-input-label">
+                        <label for="weightUnit">Berat Badan (kg):</label>
+                    </div>
+                    <select name="weight" class="tool-select-group" id="weightUnit">
+                        <option value="Kg">Kg</option>
+                    </select>
+                    <input id="bmiWeight" placeholder="Berat Badan" type="number" name="to-temperature" min="0" class="tool-input-feild">
+                </div>
+
+                <div class="tool-input-group">
+                    <button onclick="BmiCalculatorReset()" class="tool-btn tool-btn-reset">Reset</button>
+                    <button onclick="BmiCalculation()" class="tool-btn tool-btn-calculate">Hitung BMI</button>
+                </div>
+            </div>
+        </form>
+
+            <div class="tool-container-feild">
+                <div  id="OutputInfo" class="tool-output-information tool-output-box">
+                    <div id="OutputInfo2">
+                    <h2>Table Persentasi BMI</h2>
+                    <ul>
+                        <li>Berat badan kurang = 18.5</li>
+                        <li>Berat normal = 18.5–24.9</li>
+                        <li>Kelebihan Berat Badan = 25–29.9</li>
+                        <li>Kegemukan (Obesitas) = 30.0 atau lebih</li>
+                    </ul>
+                </div>
+                </div>
+
+                <div id="OutputResult" class="tool-output-results tool-output-box">
+                    <h2>Table Persentasi BMI</h2>
+                    <table class="tool-output-table">
+                        <tr id="OutputInfo3">
+                            <td>Hasil Analisa:</td>
+                            <td></td>
+                            <td><span id="bmiResult"><b>00</b></span></td>
+                        </tr>
+                        <ul>
+                            <li>Berat badan kurang = <b>18.5</b></li>
+                            <li>Berat normal = <b>18.5–24.9</b></li>
+                            <li>Kelebihan Berat Badan = <b>25–29.9</b></li>
+                            <li>Kegemukan (Obesitas) = <b>30.0 atau lebih</b></li>
+                        </ul>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/project-common-js.js"></script>
+    <script src="js/bmi-calculator-js.js"></script>
+</body>
+
+</html>
